@@ -1,0 +1,56 @@
+* {
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+body {
+    background-color: rgb(45, 51, 52);
+}
+
+.title {
+    font-size: 36px;
+    color: white;
+    margin: 0px 0px;
+    text-align: center;
+    width: 190px;
+}
+
+button {
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    border: none;
+    background-color: rgb(87, 98, 99);
+    margin-top: 0px;
+}
+
+.trackName {
+    text-align: center;
+    color: white;
+}
+
+.bpm {
+    text-align: center;
+    color: white;
+}
+
+.yuppa1 {
+    margin-top: 4px;
+    border: 2px solid rgb(87, 98, 99);
+    padding: 0px 0px;
+    font-size: 14px;
+}
+
+.yuppa2 {
+    background-color: rgb(45, 51, 52);
+    color: white;
+    text-decoration: none;
+}
+
+#bpmHere {
+    font-size: 21px;
+}
+
+#BPMSet {
+    color: rgb(45, 51, 52)
+}
