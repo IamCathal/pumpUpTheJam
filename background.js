@@ -1,4 +1,4 @@
-const spotifyToken = "BQCr9n1LW4VTw9glMb41jtD8Voob-7eb0GVbYuV7HM86aGXIStDzZGfJsSevrIWb7yp8Em6LcBcQF014oOfQP7Xhw5IFAkbgk2DDFNBeBnxnTpehoub4XRDunP8rYwIBn8KL3kN6Qg";
+const spotifyToken = "";
 
 chrome.runtime.onMessage.addListener(
     (request, sender, sendResponse) => {
