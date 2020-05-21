@@ -34,7 +34,7 @@ function getTitle() {
                     }
 
                 } else {
-                    reject("Unable to find sone title");
+                    reject("Unable to find song title");
                 }
 
             });
@@ -48,9 +48,8 @@ function callSpotify(trackTitle) {
             // alert("next is the response " + JSON.stringify(response));
             document.getElementById('trackName').textContent = `${response.data.artist} - ${response.data.name}`;
             document.getElementById('originalBPM').textContent = response.data.BPM;
-            document.getElementById('BPMSet').value = response.data.BPM;
-            document.getElementById('currBPM').textContent = response.data.BPM;
             document.getElementById('trackImage').src = response.data.image;
+            document.getElementById('BPMSet').value = response.data.BPM;
             resolve();
         })
     })

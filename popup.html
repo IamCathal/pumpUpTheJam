@@ -11,31 +11,29 @@
 
     <button id="searchButton">Search</button>
 
-    <div class="yuppa1">
-        <table>
-            <tr>
-                <div class="yuppa2" id="trackName"></div>
-            </tr>
-            <tr>
-                <div id="imageDiv">
-                    <img src="" id="trackImage" style="width: 190px; height: 190px;">
-                </div>
-            </tr>
-            <tr>
+    <div id="yuppa1">
 
-                <td id="originalBPM"></td>
-                <td id="currBPM"></td>
+        <div style="padding-left: 8; padding-right: 8;">
+            <p id="trackName" style="font-size: 18;  margin: 0"></p>
+        </div>
 
-            </tr>
-            <tr>
-                <td>
-                    <input id="BPMSet" type="number">
+        <div id="imageDiv">
+            <img src="" id="trackImage" style="width: 185px;
+                    height: 185px;
+                    margin-left: 6;
+                    margin-right: 6;
+                    margin-top: 4px;
+                    padding: 0;">
+        </div>
 
-                    <button id="speedSetButton">Set BPM</button>
 
-                </td>
-            </tr>
-        </table>
+        <span id="originalBPM" style="font-size: 28; margin-left: 10">0</span>
+        <span style="font-size: 28;"> -> </span>
+        <input id="BPMSet" type="number" value="0">
+
+        <button id="speedSetButton" style="margin-left: 8;
+                margin-right: 8; width: 90%; margin-top: 8; margin-bottom: 8">Set BPM</button>
+
     </div>
 
     <script src="getData.js"></script>

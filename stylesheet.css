@@ -30,37 +30,47 @@ button {
     margin-top: 0px;
 }
 
-.trackName,
-.bpmText {
+.trackNameDiv {
     text-align: center;
-    color: white;
     margin-left: 6px;
 }
 
-.td {
-    border: 1px solid green;
-}
-
-.bpm {
-    text-align: center;
+.trackName {
+    font-size: 20;
     color: white;
 }
 
-.yuppa1 {
+.originalBPM {
+    text-align: center;
+    color: white;
+    font-size: 20;
+}
+
+#yuppa1 {
     margin-top: 4px;
     border: 2px solid rgb(87, 98, 99);
     padding: 0px 0px;
     font-size: 14px;
 }
 
-.yuppa2 {
+.trackName {
     background-color: rgb(45, 51, 52);
     color: white;
     text-decoration: none;
     margin-left: 6px;
+    text-align: center;
 }
 
-#BPMSet,
-#speedSet {
-    color: rgb(45, 51, 52)
+#BPMSet {
+    color: white;
+    font-size: 24;
+    width: 60;
+    margin-right: 8;
+    border: none;
+    background-color: rgb(45, 51, 52);
+}
+
+.speedSetButton {
+    margin-left: 16;
+    margin-right: 16;
 }
