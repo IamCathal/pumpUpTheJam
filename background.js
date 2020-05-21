@@ -19,7 +19,8 @@ function spotifyCall(trackTitle) {
             "artist": "",
             "name": trackTitle,
             "link": "",
-            "BPM": ""
+            "BPM": "",
+            "image": ""
         }
 
         fetch(`https://api.spotify.com/v1/search?q=${encodeURI(trackTitle)}&type=track&limit=1&offset=0`, {
@@ -38,6 +39,7 @@ function spotifyCall(trackTitle) {
                 resObj.artist = res.tracks.items[0].artists[0].name;
                 resObj.name = res.tracks.items[0].name;
                 resObj.link = res.tracks.items[0].external_urls.spotify;
+                resObj.image = res.tracks.items[0].album.images[1].url;
                 // alert(resObj.link);
 
                 fetch(`https://api.spotify.com/v1/audio-features/${trackID}`, {
@@ -49,13 +51,8 @@ function spotifyCall(trackTitle) {
                     }).then((res) => res.json())
                     .then((res) => {
                         const { tempo } = res;
-
                         resObj.BPM = Math.floor(tempo)
-
-                        console.log(`1.25x = ${Math.floor(tempo)*1.25} 1.5x = ${Math.floor(tempo)*1.5}`);
-
                         resolve(resObj)
-
                     }, (err) => {
                         resolve(err);
                     })

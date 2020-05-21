@@ -5,6 +5,8 @@ let trackTitle = "";
 document.getElementById("searchButton").addEventListener("click", () => {
     getTitle().then((res) => {
         callSpotify(res)
+    }, (err) => {
+        document.getElementById('trackName').textContent = err;
     });
 });
 
@@ -24,7 +26,17 @@ function getTitle() {
     return new Promise((resolve, reject) => {
         chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
             chrome.tabs.sendMessage(tabs[0].id, { message: "getTitle" }, function(response) {
-                resolve(response.data)
+                if (response !== undefined) {
+                    if (response.status === "success") {
+                        resolve(response.data);
+                    } else {
+                        reject("Song title not rendered yet")
+                    }
+
+                } else {
+                    reject("Unable to find sone title");
+                }
+
             });
         })
     })
@@ -37,6 +49,8 @@ function callSpotify(trackTitle) {
             document.getElementById('trackName').textContent = `${response.data.artist} - ${response.data.name}`;
             document.getElementById('originalBPM').textContent = response.data.BPM;
             document.getElementById('BPMSet').value = response.data.BPM;
+            document.getElementById('currBPM').textContent = response.data.BPM;
+            document.getElementById('trackImage').src = response.data.image;
             resolve();
         })
     })
