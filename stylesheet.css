@@ -24,9 +24,16 @@ button {
     margin-top: 0px;
 }
 
-.trackName {
+.trackName,
+.originalBPM {
     text-align: center;
     color: white;
+    margin-left: 6px;
+}
+
+.originalBPM,
+.currBPM {
+    font-size: 32px;
 }
 
 .bpm {
@@ -45,12 +52,10 @@ button {
     background-color: rgb(45, 51, 52);
     color: white;
     text-decoration: none;
+    margin-left: 6px;
 }
 
-#bpmHere {
-    font-size: 21px;
-}
-
-#BPMSet {
+#BPMSet,
+#speedSet {
     color: rgb(45, 51, 52)
 }
